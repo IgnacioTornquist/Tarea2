@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="css/estilos.css" rel="stylesheet">
+
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <form id="formulario" class="row g-3 needs-validation" novalidate>
+                <ul>
+                    <li>
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input  type="string" class="form-control" id="nombre" maxlength="50" placeholder="Digite el nombre completo" required>
+                        <div class="valid-feedback">
+                            Correcto
+                        </div>
+                        <div class="invalid-feedback">
+                            El nombre es obligatorio
+                        </div>
+                    </li>
+                    <li>
+                        <label for="rut" class="form-label">Rut</label>
+                        <input type="string" class="form-control" id="rut"  maxlength="9" placeholder="Digite el rut sin puntos ni guion" pattern="[0-9]{7,8}[0-9Kk]{1}" required>
+                        <div class="valid-feedback">
+                            Correcto
+                        </div>
+                        <div class="invalid-feedback">
+                            El rut no tiene el formato adecuado
+                        </div>
+                    </li>
+                    <li>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" maxlength="50" required>
+                        <div class="valid-feedback">
+                            Correcto
+                        </div>
+                        <div class="invalid-feedback">
+                            El email es obligatorio
+                        </div>
+                    </li>
+                    <li>
+                        <label for="numero" class="form-label">Numero</label>
+                        <input type="number" class="form-control" id="numero" min="900000000" max="999999999" placeholder="(+56)" required>
+                        <div class="valid-feedback">
+                            Correcto
+                        </div>
+                        <div class="invalid-feedback">
+                            El numero esta incorrecto
+                        </div>
+                    </li>
+                    <li>
+                        <p>Lenguajes que conoces:</p>
+                        <div>
+                            <input type="checkbox" id="python">
+                            <label for="python">Python</label>
+                        </div>   
+                        <div>
+                            <input type="checkbox" id="typescript" >
+                            <label for="typescript">TypeScript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="c++" >
+                            <label for="c++">C++</label>
+                        </div>   
+                        <div>
+                            <input type="checkbox" id="c#" >
+                            <label for="c#">C#</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="php" >
+                            <label for="php">PHP</label>
+                        </div>   
+                        <div>
+                            <input type="checkbox" id="ruby" >
+                            <label for="ruby">Ruby on Rails</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="java" >
+                            <label for="java">Java</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="r" >
+                            <label for="r">R</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="groovy" >
+                            <label for="groovy">Groovy</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="go" >
+                            <label for="go">Go</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="swift" >
+                            <label for="swift">Swift</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="kotlin" >
+                            <label for="kotlin">Kotlin</label>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Cual es su nivel de experiencia en programacion?</p>
+                        <div>
+                            <input type="radio" id="bajo" name="drone" value="bajo" >
+                            <label for="bajo">Bajo</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="medio" name="drone" value="medio" >  
+                            <label for="medio">Medio</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="alto" name="drone" value="alto" >
+                            <label for="alto">Alto</label>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Nivel de conocimiento sobre los siguientes lenguajes de programacion:</p>
+                        <div>
+                            <input type="range" id="python" name="python" min="0" max="10" >
+                            <label for="python">Python</label>
+                        </div>
+                        <div>
+                            <input type="range" id="java" name="java" min="0" max="10" >
+                            <label for="java">Java</label>
+                        </div>
+                        <div>
+                            <input type="range" id="c++" name="c++" min="0" max="10" >
+                            <label for="c++">C++</label>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Seleccione cual de los siguientes cursos les ha tomado mayor dificultad:</p>
+                        <div>
+                            <input type="checkbox" id="estructura" >
+                            <label for="estructura"> Estructura de Datos</label>
+                        </div>   
+                        <div>
+                            <input type="checkbox" id="inteligencia" >
+                            <label for="inteligencia">Inteligencia Artificial</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interaccion" >
+                            <label for="interaccion">Interaccion Humano-Computador</label>
+                        </div>   
+                        <div>
+                            <input type="checkbox" id="sistemas" >
+                            <label for="sistemas">Sistemas Operativos</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="otro" >
+                            <label for="otro">Otro<input type="text" id="texto_otro" maxlength="20"></label> 
+                        </div>       
+                    </li>
+                    <li>
+                        <p>Queremos conocer su opinion acerca de la escuela</p>
+                        <textarea class="form-control" id="opinion" maxlength="500" cols="50" rows="8" placeholder="Hasta 500 caracteres" required></textarea>
+                        <div class="valid-feedback">
+                            Correcto
+                        </div>
+                        <div class="invalid-feedback">
+                            El texto es obligatorio
+                        </div>
+                    </li>
+                    <div>
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                        <button class="btn btn-primary" type="reset">Cancelar</button>
+                    </div>
+                </ul>
+            </form>
+        </div>
+        <script data-main="js/inicio" src="js/require-jquery.js"></script>
+    </body>
+</html>

@@ -1,13 +1,22 @@
-"use strict";
-var elemento1 = document.getElementById("editar");
-var elemento2 = document.getElementById("cruz");
-elemento1.addEventListener("click", function abrirEditar() {
-    var elemento1 = document.getElementById("antecedentes");
-    var elemento2 = document.getElementById("informacion");
-    elemento2.hidden = false;
-    elemento1.style.visibility = 'hidden';
-});
-elemento2.addEventListener("click", function abrirEditar() {
-    var elemento1 = document.getElementById("agregar");
-    elemento1.hidden = false;
+define(["require", "exports", "jquery"], function (require, exports, jquery) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var $ = jquery;
+    (function () {
+        'use strict';
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+                console.log("Hemos recibido sus datos,pronto nos estaremos comunicando con usted");
+            }, false);
+        });
+    })();
 });

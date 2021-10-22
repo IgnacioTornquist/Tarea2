@@ -1,17 +1,24 @@
+import jquery=require('jquery');
 
-let elemento1 :any=document.getElementById("editar");
-let elemento2 :any=document.getElementById("cruz");
+const $:JQueryStatic=jquery;
 
-elemento1.addEventListener("click",function abrirEditar()
-{
-    let elemento1 :any=document.getElementById("antecedentes");
-    let elemento2 :any=document.getElementById("informacion");
-    
-    elemento2.hidden=false;
-    elemento1.style.visibility = 'hidden';
-});
-elemento2.addEventListener("click",function abrirEditar()
-{
-    let elemento1 :any=document.getElementById("agregar");
-    elemento1.hidden=false;
-});
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event:any) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+          console.log("Hemos recibido sus datos,pronto nos estaremos comunicando con usted")
+        }, false)
+      })
+  })()
